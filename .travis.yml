@@ -2,8 +2,7 @@ language: php
 php:
   -"7.2.7"
   -"7.2.8"
-before_install:
-  -php /home/travis/.phpenv/versions/7.2.7/bin/composer.phar self-update
 before_script:
   -composer install
-script: phpunit --configuration tests/Unit/ValuadoraControllerTest.php --coveage-text
+script:
+  - test/unit/ValuadoraControllerTest.php
